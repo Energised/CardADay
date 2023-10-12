@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\wando\\RiderProjects\\CardADay\\CardADay.Db\\CardADay.Db.sqlproj": {}
+  },
+  "projects": {
+    "c:\\Users\\wando\\RiderProjects\\CardADay\\CardADay.Db\\CardADay.Db.sqlproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\wando\\RiderProjects\\CardADay\\CardADay.Db\\CardADay.Db.sqlproj",
+        "projectName": "CardADay.Db",
+        "projectPath": "c:\\Users\\wando\\RiderProjects\\CardADay\\CardADay.Db\\CardADay.Db.sqlproj",
+        "packagesPath": "C:\\Users\\wando\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\wando\\RiderProjects\\CardADay\\CardADay.Db\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\wando\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "XpWZ+wEkAsvqVD7domSMh6j+dfDvkoLxEqlXZT32vYg/cSkJhdiOXT6lrp+trUB5YMRFb4iAHm35UwhXDR4s5w==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\wando\\RiderProjects\\CardADay\\CardADay.Db\\CardADay.Db.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wando\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\wando\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net45\\1.0.0\\microsoft.netframework.referenceassemblies.net45.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

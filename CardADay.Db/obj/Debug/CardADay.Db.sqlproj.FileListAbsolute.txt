@@ -1,0 +1,8 @@
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\bin\Debug\CardADay.Db.dacpac
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\obj\Debug\CardADay.Db.sqlproj.AssemblyReference.cache
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\obj\Debug\Model.xml
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\obj\Debug\refactor.xml
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\obj\Debug\postdeploy.sql
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\obj\Debug\predeploy.sql
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\obj\Debug\CardADay.Db.dll
+c:\Users\wando\RiderProjects\CardADay\CardADay.Db\obj\Debug\CardADay.Db.pdb
