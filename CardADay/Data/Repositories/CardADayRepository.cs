@@ -27,7 +27,7 @@ public class CardADayRepository : IRepository<Card>
         
         string GetSql()
         {
-            return "SELECT * FROM [Cards}";
+            return "SELECT * FROM [Cards]";
         }
     }
 

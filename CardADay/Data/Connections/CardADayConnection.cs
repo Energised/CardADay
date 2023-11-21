@@ -15,6 +15,7 @@ public class CardADayConnection : IConnection
     
     public IDbConnection GetSqlConnection()
     {
-        return new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+        var connectionString = _configuration.GetConnectionString("DefaultConnection");
+        return new SqlConnection(connectionString);
     }
 }

@@ -14,12 +14,14 @@
         "outputPath": "C:\\Users\\wando\\RiderProjects\\CardADay\\CardADay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wando\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\wando\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,17 +40,21 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Autofac": {
-              "target": "Package",
-              "version": "[7.1.0, )"
-            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.4, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[8.0.0-rc.2.23479.6, )"
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -74,7 +80,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.415\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

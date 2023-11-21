@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardADay", "CardADay\CardADay.csproj", "{317B5E7A-CED8-4A7A-AB8C-35C1871B683B}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CardADay.Db", "CardADay.Db\CardADay.Db.sqlproj", "{804B093F-1F76-4EBF-95CC-A449FB47FE21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{317B5E7A-CED8-4A7A-AB8C-35C1871B683B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{317B5E7A-CED8-4A7A-AB8C-35C1871B683B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{317B5E7A-CED8-4A7A-AB8C-35C1871B683B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804B093F-1F76-4EBF-95CC-A449FB47FE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804B093F-1F76-4EBF-95CC-A449FB47FE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804B093F-1F76-4EBF-95CC-A449FB47FE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804B093F-1F76-4EBF-95CC-A449FB47FE21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

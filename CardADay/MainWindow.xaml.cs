@@ -1,16 +1,28 @@
 ﻿using System.Windows;
-using CardADay.ViewModels;
+using CardADay.Data.Repositories;
+using CardADay.Models;
 
 namespace CardADay;
 
 public partial class MainWindow : Window
 {
-    private MainWindowViewModel ViewModel => (MainWindowViewModel) DataContext;
+    private readonly IRepository<Card> _cardADayRepository;
     
-    public MainWindow() => InitializeComponent();
+    private Card LoadedCard { get; set; }
 
-    private async void CallMtgTest(object sender, RoutedEventArgs e)
+    public MainWindow(IRepository<Card> cardADayRepository)
     {
-        await ViewModel.GetAllCardsTest();
+        InitializeComponent();
+        _cardADayRepository = cardADayRepository;
+    }
+
+    private async void GetACard(object sender, RoutedEventArgs eventArgs)
+    {
+        var data = await _cardADayRepository.GetAllAsync();
+    }
+
+    private void ReloadMtgDatabase(object sender, RoutedEventArgs eventArgs)
+    {
+        
     }
 }

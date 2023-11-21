@@ -1,43 +1,50 @@
-﻿using Autofac;
-using System;
+﻿using System.IO;
 using System.Windows;
 using CardADay.Data.Connections;
 using CardADay.Data.Repositories;
 using CardADay.Models;
-using CardADay.ViewModels;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace CardADay;
 
 public partial class App : Application
 {
-    private IContainer _container { get; set; }
+    public static IHost AppHost { get; private set; }
 
-    protected override void OnStartup(StartupEventArgs startupEventArgs)
+    public App()
     {
+        AppHost = Host.CreateDefaultBuilder()
+            .ConfigureServices((hostContext, services) =>
+            {
+                services.AddSingleton<MainWindow>();
+                services.AddTransient<IConnection, CardADayConnection>();
+                services.AddTransient<IRepository<Card>, CardADayRepository>();
+            })
+            .ConfigureAppConfiguration((configContext, builder) =>
+            {
+                builder.SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json")
+                    .AddEnvironmentVariables()
+                    .Build();
+            })
+            .Build();
+    }
+
+    protected override async void OnStartup(StartupEventArgs startupEventArgs)
+    {
+        await AppHost.StartAsync();
+
+        var startupForm = AppHost.Services.GetRequiredService<MainWindow>();
+        startupForm.Show();
+        
         base.OnStartup(startupEventArgs);
-        _container = BuildContainer();
-        _container.Resolve<MainWindowViewModel>();
-        DISource.Resolver = Resolve;
-        //ResolveViewModels();
-    }
-    
-    object Resolve(Type type, object key, string name) {
-        if(type == null)
-            return null;
-        if(key != null)
-            return _container.ResolveKeyed(key, type);
-        if(name != null)
-            return _container.ResolveNamed(name, type);
-        return _container.Resolve(type);
     }
 
-    private static IContainer BuildContainer()
+    protected override async void OnExit(ExitEventArgs exitEventArgs)
     {
-        var builder = new ContainerBuilder();
-        builder.RegisterType<IConnection>().As<CardADayConnection>();
-        builder.RegisterType<IRepository<Card>>().As<CardADayRepository>();
-        builder.RegisterType<MainWindowViewModel>();
-        var container = builder.Build();
-        return container;
+        await AppHost.StopAsync();
+        base.OnExit(exitEventArgs);
     }
 }

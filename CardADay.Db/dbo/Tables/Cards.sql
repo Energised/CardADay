@@ -1,6 +1,4 @@
-IF OBJECT_ID(N'[dbo].[Cards]', N'U') IS NULL
-BEGIN
-    CREATE TABLE [dbo].[Cards]
+CREATE TABLE [dbo].[Cards]
     (
         [Id]            INT					NOT NULL PRIMARY KEY,
 		[Guid]			UNIQUEIDENTIFIER	NOT NULL UNIQUE,
@@ -17,4 +15,3 @@ BEGIN
         [SetName]       VARCHAR(50)			NOT NULL,
         [ShortSetName]  VARCHAR(10)			NOT NULL
     );
-END;
